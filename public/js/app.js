@@ -7,7 +7,6 @@
 //   });
 // });
 
-//
 //GOAL:fetch weather!
 //
 //1. Setup a call to fetch weather for Boston

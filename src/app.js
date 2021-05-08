@@ -8,6 +8,7 @@ const forecast = require("./utils/forecast.js");
 // console.log(path.join(__dirname, "../public")); //to go one folder up and go to public.now comes serving up the directory
 
 const app = express(); //to store our application
+const port = process.env.PORT || 3000;
 
 //DEFINE PATHS FOR EXPRESS CONFIG
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -111,8 +112,8 @@ app.get("*", (req, res) => {
   });
 }); //here * character means match anything that has not been expressed so far(like weather,about,help have already been expressed)
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000");
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
 }); //starts the server
 //it always up and running in case user wants something
 
